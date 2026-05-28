@@ -1,0 +1,306 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050505;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* LOADER */
+
+#loader{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+#loader h1{
+  color:#9d4edd;
+  font-size:5rem;
+  letter-spacing:10px;
+}
+
+/* HEADER */
+
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  z-index:1000;
+  backdrop-filter:blur(15px);
+  background:rgba(0,0,0,0.4);
+}
+
+.logo{
+  font-size:2rem;
+  font-weight:700;
+  color:#9d4edd;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#9d4edd;
+}
+
+.btn-header{
+  background:#9d4edd;
+  padding:12px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+  height:100vh;
+  background:url('descargas/Photo by Hardik Pandya on Unsplash.jpg') center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero-overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1{
+  font-size:5rem;
+  max-width:900px;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:1.2rem;
+  color:#ddd;
+}
+
+.hero-buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+  padding:15px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+.btn-primary{
+  background:#9d4edd;
+}
+
+.btn-secondary{
+  border:1px solid white;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+  transform:translateY(-5px);
+}
+
+/* SECCIONES */
+
+section{
+  padding:120px 8%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.title h2{
+  font-size:3rem;
+  color:#9d4edd;
+}
+
+/* NOSOTROS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#111;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  transition:0.4s;
+  box-shadow:0 0 20px rgba(157,78,221,0.2);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card i{
+  font-size:3rem;
+  color:#9d4edd;
+  margin-bottom:20px;
+}
+
+/* CATALOGO */
+
+.productos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+}
+
+.producto{
+  background:#111;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.producto:hover{
+  transform:translateY(-10px);
+}
+
+.producto img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+}
+
+.producto-info{
+  padding:25px;
+}
+
+.producto-info h3{
+  margin-bottom:10px;
+}
+
+.producto-info p{
+  color:#9d4edd;
+  font-size:1.3rem;
+  margin-bottom:20px;
+}
+
+.producto button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:30px;
+  background:#9d4edd;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.comentario{
+  margin-top:20px;
+  color:#bbb;
+}
+
+/* GALERIA */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+
+.gallery-grid img{
+  width:100%;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.05);
+}
+
+/* FAQ */
+
+.faq-item{
+  background:#111;
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+  background:black;
+  text-align:center;
+  padding:60px 20px;
+}
+
+.footer-social{
+  margin:20px 0;
+}
+
+.footer-social a{
+  color:white;
+  font-size:2rem;
+  margin:0 10px;
+}
+
+.footer-info{
+  color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:3rem;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+}
